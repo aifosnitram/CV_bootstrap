@@ -1,0 +1,184 @@
+/* ==========================================================================
+   CV — Sofía Martín Peñarroya
+   Entrega Bootstrap 5 · INT
+   Los estilos propios solo cubren lo que Bootstrap no da de serie.
+   ========================================================================== */
+
+:root {
+    --cv-ink: #1c2420;
+    --cv-ink-soft: #5f6f66;
+    --cv-line: #dde5df;
+    --cv-surface-alt: #f5f9f6;
+    --cv-accent: #2f6b4a;
+    --cv-accent-dark: #234f37;
+    --cv-accent-soft: #cfe2d6;
+}
+
+body {
+    color: var(--cv-ink);
+    background: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Cabecera ---------------------------------------------------------------- */
+
+.site-header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--cv-line);
+    background: var(--cv-surface-alt);
+}
+
+.avatar {
+    display: inline-grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--cv-accent-soft);
+    color: var(--cv-accent-dark);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.cv-name {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.cv-role {
+    color: var(--cv-ink-soft);
+}
+
+/* Secciones --------------------------------------------------------------- */
+
+.section-title {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cv-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--cv-line);
+}
+
+.subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+}
+
+/* Navegación -------------------------------------------------------------- */
+
+.cv-nav a {
+    display: block;
+    padding: 0.35rem 0;
+    color: var(--cv-ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.cv-nav a:hover,
+.cv-nav a:focus-visible {
+    color: var(--cv-accent-dark);
+    border-bottom-color: var(--cv-accent);
+}
+
+@media (min-width: 992px) {
+    .cv-nav {
+        position: sticky;
+        top: 1.5rem;
+    }
+}
+
+/* Experiencia y formación ------------------------------------------------- */
+
+.timeline__item + .timeline__item {
+    margin-top: 1.25rem;
+}
+
+.timeline__role {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.timeline__place {
+    color: var(--cv-ink-soft);
+    margin-bottom: 0.15rem;
+}
+
+.timeline__date {
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--cv-accent);
+}
+
+.plain-list li {
+    padding: 0.15rem 0;
+}
+
+/* Idiomas ----------------------------------------------------------------- */
+
+.lang-list__item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--cv-line);
+}
+
+.lang-list__level {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cv-accent);
+}
+
+.lang-list__dots {
+    display: inline-flex;
+    gap: 0.3rem;
+    margin-inline: 0.75rem;
+}
+
+.lang-list__dots .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--cv-accent);
+    background: transparent;
+}
+
+.lang-list__dots .dot--on {
+    background: var(--cv-accent);
+}
+
+/* Pie --------------------------------------------------------------------- */
+
+.site-footer {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--cv-line);
+    background: var(--cv-surface-alt);
+    font-size: 0.9375rem;
+    color: var(--cv-ink-soft);
+}
+
+/* Navegación entre páginas ------------------------------------------------- */
+
+.cv-nav a[aria-current="page"] {
+    color: var(--cv-accent-dark);
+    font-weight: 600;
+    border-bottom-color: var(--cv-accent);
+}
+
+.cv-name__link,
+.cv-name__link:hover,
+.cv-name__link:focus-visible {
+    color: inherit;
+    text-decoration: none;
+}
+
